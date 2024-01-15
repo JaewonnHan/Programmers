@@ -18,7 +18,7 @@ public static void main(String[] args) throws IOException{
             
             
         }
-        br.close();
+       
 
 		bw.flush();
 		bw.close();
