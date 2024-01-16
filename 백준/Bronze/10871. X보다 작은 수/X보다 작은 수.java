@@ -12,10 +12,10 @@ public class Main{
     for(int i=0; i<N; i++){
          value = Integer.parseInt(st.nextToken());   
         if(value < P){
-            bw.write(value+"\n");
+            bw.write(value+" ");
         }
     }
-        br.close();
+    br.close();
     bw.flush();
     bw.close();
         }
