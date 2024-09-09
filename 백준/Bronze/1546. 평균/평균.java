@@ -1,24 +1,21 @@
-import java.util.Arrays;
-import java.util.Scanner;
- 
-public class Main {
-	public static void main(String[] args) {
- 
-		Scanner sc = new Scanner(System.in);
- 
-		double arr[] = new double[sc.nextInt()];
-		
-		for(int i = 0; i < arr.length; i++) {
-			arr[i] = sc.nextInt();
-		}
-		
-		
-		double sum = 0;
-		Arrays.sort(arr);
-		
-		for(int i = 0; i < arr.length; i++) {
-			sum += ((arr[i] / arr[arr.length-1]) * 100);
-		}
-		System.out.print(sum / arr.length);
-	}
-}
+import java.util.*;
+import java.io.*;
+public class Main{
+        public static void main(String[] args)throws IOException{
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int N = Integer.parseInt(br.readLine());
+            double[] array = new double[N];
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            double sum = 0; 
+            for(int i=0; i<N; i++){
+                array[i] = Double.parseDouble(st.nextToken());
+                
+            }
+            Arrays.sort(array);
+            for(int i=0; i<N; i++){
+                sum += (array[i]/array[N-1] * 100);
+            }
+            System.out.print(sum / N);
+            
+        }
+    }
