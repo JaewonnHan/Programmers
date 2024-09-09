@@ -1,28 +1,34 @@
 import java.util.*;
 import java.io.*;
-public class Main{
-    public static void main(String[] args)throws IOException{
+public class Main {
+
+    public static void main(String[] args) throws IOException{
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+
+        StringTokenizer st = new StringTokenizer(br.readLine()); // StringTokenizer로 N과 M, " "(공백)으로 구분
+
         int N = Integer.parseInt(st.nextToken());
+        int[] arr = new int[N];
         int M = Integer.parseInt(st.nextToken());
-        int[]arr = new int[N];
-        for(int i=0; i<M; i++){
-            st = new StringTokenizer(br.readLine());
-            int s= Integer.parseInt(st.nextToken());
-            int j = Integer.parseInt(st.nextToken());
-            int k =  Integer.parseInt(st.nextToken());
-            for(int p=s-1; p<j; p++){
-                arr[p] = k;
+
+        for(int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());			 // StringTokenizer로 " "(공백)으로 구분
+														
+            int I = Integer.parseInt(st.nextToken());
+            int J = Integer.parseInt(st.nextToken());
+            int K = Integer.parseInt(st.nextToken());
+
+            for(int j = I - 1; j < J; j++) {
+                arr[j] = K;
             }
         }
-        for(int t=0; t<arr.length; t++){
-            bw.write(arr[t]+ " ");
+        for(int k = 0; k < arr.length; k++) {
+            bw.write(arr[k] + " ");
         }
         br.close();
         bw.flush();
         bw.close();
-        
     }
 }
