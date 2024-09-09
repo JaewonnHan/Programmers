@@ -1,21 +1,19 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
+
 public class Main{
-    public static void main(String[] args)throws IOException{
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int[]arr = new int[9];
         int max = 0;
-        int index = 0;
+        int count = 0;
         for(int i=0; i<9; i++){
-            arr[i] = Integer.parseInt(br.readLine());
-            if(arr[i]>max){
-                max = arr[i];
-                index = i+1;
+            int val = Integer.parseInt(br.readLine());
+            if(val > max){
+                max = val;
+                count = i+1;
             }
         }
         System.out.println(max);
-        System.out.println(index);
-       
-        
+        System.out.println(count);
     }
 }
