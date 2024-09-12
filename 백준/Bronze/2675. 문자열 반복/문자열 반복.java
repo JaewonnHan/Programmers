@@ -6,9 +6,9 @@ public class Main{
         int N = Integer.parseInt(br.readLine());
         
         for(int i=0; i<N; i++){
-            String[] str = br.readLine().split(" ");
-            int P = Integer.parseInt(str[0]);
-            String S = str[1];
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int P = Integer.parseInt(st.nextToken());
+            String S = st.nextToken();
             for(int j=0; j<S.length(); j++){
                 for(int k=0; k<P; k++){
                     System.out.print(S.charAt(j));
